@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .views import index, neo4j_health
+from .views import db_health, index, neo4j_health
 
 urlpatterns = [
     path('', index),
     path('admin/', admin.site.urls),
     path('health/neo4j/', neo4j_health),
+    path('health/db/', db_health),
 ]
